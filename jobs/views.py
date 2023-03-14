@@ -1,8 +1,7 @@
 from django.views.generic import ListView
-from . forms import JobFilterForm, JobApplicationForm
-from .models import JobListing, JobApplication
-from django.shortcuts import render, get_object_or_404
-from django.contrib import messages
+from . forms import JobFilterForm
+from .models import JobListing
+
 
 class HomePage(ListView):
     http_method_names = ["get"]
@@ -48,5 +47,6 @@ class FilterJobListings(ListView):
         context = super().get_context_data(**kwargs)
         context['filter_form'] = JobFilterForm(self.request.GET)
         return context
+
 
 

@@ -17,9 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
 from jobs import urls as jobs_urls
+from employer import urls as employer_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include(jobs_urls, namespace="jobs")),
+    path("", include(employer_urls, namespace="employer")),
     path("accounts/", include("allauth.urls"))
 ]

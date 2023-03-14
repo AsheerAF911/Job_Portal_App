@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
 
     'jobs',
+    'employer',
     'djmoney',
     'allauth',
     'allauth.account',
