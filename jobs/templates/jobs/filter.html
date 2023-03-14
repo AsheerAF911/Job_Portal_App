@@ -1,0 +1,5 @@
+<form method="get" action="{% url 'jobs:index' %}">
+    {% csrf_token %}
+    {{ filter_form.as_p }}
+    <button type="submit">Filter</button>
+</form>
